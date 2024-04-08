@@ -8,7 +8,7 @@ builds:
   - env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X github.com/kunalsin9h/cf-tool/main.version={{ .Version }}
+      - -s -w -X github.com/kunalsin9h/cf-tool/main.Version={{ .Version }}
     goos:
       - linux
       - windows

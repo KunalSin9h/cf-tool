@@ -7,20 +7,21 @@ import (
 
 	"github.com/fatih/color"
 	ansi "github.com/k0kubun/go-ansi"
+	"github.com/kunalsin9h/cf-tool/client"
+	"github.com/kunalsin9h/cf-tool/cmd"
+	"github.com/kunalsin9h/cf-tool/config"
 	"github.com/mitchellh/go-homedir"
-	"github.com/xalanq/cf-tool/client"
-	"github.com/xalanq/cf-tool/cmd"
-	"github.com/xalanq/cf-tool/config"
 
 	docopt "github.com/docopt/docopt-go"
 )
 
-var version = "vdev"
+var Version = "dev"
+
 const configPath = "~/.cf/config"
 const sessionPath = "~/.cf/session"
 
 func main() {
-	usage := `Codeforces Tool $%version%$ (cf). https://github.com/xalanq/cf-tool
+	usage := `Codeforces Tool $%version%$ (cf). https://github.com/kunalsin9h/cf-tool
 
 You should run "cf config" to configure your handle, password and code
 templates at first.
@@ -147,13 +148,15 @@ Script in template:
   $%file%$   Name of source file (Excluding suffix, e.g. "a")
   $%rand%$   Random string with 8 character (including "a-z" "0-9")`
 	color.Output = ansi.NewAnsiStdout()
+	usage = strings.Replace(usage, `$%version%$`, Version, 1)
 
-	usage = strings.Replace(usage, `$%version%$`, version, 1)
-	opts, _ := docopt.ParseArgs(usage, os.Args[1:], fmt.Sprintf("Codeforces Tool (cf) %v", version))
-	opts[`{version}`] = version
+	// check the command line arguments, if not present then show usage
+	opts, _ := docopt.ParseArgs(usage, os.Args[1:], fmt.Sprintf("Codeforces Tool (cf) %v", Version))
+	opts[`{version}`] = Version
 
 	cfgPath, _ := homedir.Expand(configPath)
 	clnPath, _ := homedir.Expand(sessionPath)
+
 	config.Init(cfgPath)
 	client.Init(clnPath, config.Instance.Host, config.Instance.Proxy)
 
@@ -161,5 +164,6 @@ Script in template:
 	if err != nil {
 		color.Red(err.Error())
 	}
+
 	color.Unset()
 }

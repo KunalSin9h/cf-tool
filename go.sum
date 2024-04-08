@@ -42,8 +42,8 @@ github.com/tklauser/go-sysconf v0.3.13 h1:GBUpcahXSpR2xN01jhkNAbTLRk2Yzgggk8IM08
 github.com/tklauser/go-sysconf v0.3.13/go.mod h1:zwleP4Q4OehZHGn4CYZDipCgg9usW5IJePewFCGVEa0=
 github.com/tklauser/numcpus v0.7.0 h1:yjuerZP127QG9m5Zh/mSO4wqurYil27tHrqwRoRjpr4=
 github.com/tklauser/numcpus v0.7.0/go.mod h1:bb6dMVcj8A42tSE7i32fsIUCbQNllK5iDguyOZRUzAY=
-github.com/xalanq/cf-tool v1.0.0 h1:VX5hj8Zl5Ysz3BFzEPYAhS66gKNENa7YLtjTMLxSjh4=
-github.com/xalanq/cf-tool v1.0.0/go.mod h1:UFTBTaimg0IdoEgQw2low07izucdAIHJPMeXnD4DP0Q=
+github.com/kunalsin9h/cf-tool v1.0.0 h1:VX5hj8Zl5Ysz3BFzEPYAhS66gKNENa7YLtjTMLxSjh4=
+github.com/kunalsin9h/cf-tool v1.0.0/go.mod h1:UFTBTaimg0IdoEgQw2low07izucdAIHJPMeXnD4DP0Q=
 github.com/yuin/goldmark v1.4.13/go.mod h1:6yULJ656Px+3vBD8DxQVa3kxgyrAnzto9xy5taEt/CY=
 github.com/yusufpapurcu/wmi v1.2.4 h1:zFUKzehAFReQwLys1b/iSMl+JQGSCSjtVqQn9bBrPo0=
 github.com/yusufpapurcu/wmi v1.2.4/go.mod h1:SBZ9tNy3G9/m5Oi98Zks0QjeHVDvuK0qfxQmPyzfmi0=

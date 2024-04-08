@@ -9,9 +9,9 @@ import (
 
 	"github.com/fatih/color"
 	ansi "github.com/k0kubun/go-ansi"
+	"github.com/kunalsin9h/cf-tool/client"
+	"github.com/kunalsin9h/cf-tool/util"
 	homedir "github.com/mitchellh/go-homedir"
-	"github.com/xalanq/cf-tool/client"
-	"github.com/xalanq/cf-tool/util"
 )
 
 // AddTemplate add template
@@ -21,6 +21,7 @@ func (c *Config) AddTemplate() (err error) {
 	type kv struct {
 		K, V string
 	}
+
 	langs := []kv{}
 	for k, v := range client.Langs {
 		langs = append(langs, kv{k, v})

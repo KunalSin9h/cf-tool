@@ -3,8 +3,8 @@ package cmd
 import (
 	"time"
 
-	"github.com/xalanq/cf-tool/client"
-	"github.com/xalanq/cf-tool/config"
+	"github.com/kunalsin9h/cf-tool/client"
+	"github.com/kunalsin9h/cf-tool/config"
 )
 
 // Race command
