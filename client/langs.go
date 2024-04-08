@@ -9,7 +9,7 @@ var Langs = map[string]string{
 	"42": "GNU G++11 5.1.0",
 	"50": "GNU G++14 6.4.0",
 	"54": "GNU G++17 7.3.0",
-	"73": "GNU G++20 11.2.0 (64 bit, winlibs)",
+	"89": "GNU G++20 11.2.0 (64 bit, winlibs)",
 	"2":  "Microsoft Visual C++ 2010",
 	"59": "Microsoft Visual C++ 2017",
 	"9":  "C# Mono 5.18",
