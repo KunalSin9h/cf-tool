@@ -43,7 +43,7 @@ func findHandle(body []byte) (string, error) {
 }
 
 func findCsrf(body []byte) (string, error) {
-	reg := regexp.MustCompile(`csrf='(.+?)'`)
+	reg := regexp.MustCompile(`__cf_chl_tk=([^"]+)`)
 	tmp := reg.FindSubmatch(body)
 	if len(tmp) < 2 {
 		return "", errors.New("Cannot find csrf")
@@ -74,9 +74,10 @@ func (c *Client) Login() (err error) {
 
 	ftaa := genFtaa()
 	bfaa := genBfaa()
+	println(ftaa, bfaa)
 
 	body, err = util.PostBody(c.client, c.host+"/enter", url.Values{
-		"csrf_token":    {csrf},
+		"__cf_chl_tk":   {csrf},
 		"action":        {"enter"},
 		"ftaa":          {ftaa},
 		"bfaa":          {bfaa},

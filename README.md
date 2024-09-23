@@ -1,5 +1,25 @@
 # Codeforces Tool
 
+### This Project is Now Dead!
+Codeforces has employed a Browser Verification challenges, which made this application 
+unusable, since it was doing browser simulation. Like `FormSubmit` when problems are submitted.
+
+```go
+func PostBody(client *http.Client, URL string, data url.Values) ([]byte, error) {
+    resp, err := client.PostForm(URL, data)
+    if err != nil {
+    return nil, err
+}
+    defer resp.Body.Close()
+    return ioutil.ReadAll(resp.Body)
+}
+```
+
+See `client.PostForm`, and API is not available for this kind of actions. Every operation in 
+this app was of scrapping, now, it not possible. 
+
+---
+
 [![Github release](https://img.shields.io/github/release/kunalsin9h/cf-tool.svg)](https://github.com/kunalsin9h/cf-tool/releases)
 [![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue.svg)](https://github.com/kunalsin9h/cf-tool/releases)
 [![Build Status](https://travis-ci.org/kunalsin9h/cf-tool.svg?branch=master)](https://travis-ci.org/kunalsin9h/cf-tool)
